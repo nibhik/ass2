@@ -1,0 +1,55 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+<style>
+    th{ 
+        color:#fff;
+            }
+</style>
+
+
+<table class="table table-striped">
+    <tr  class="bg-info">
+        <th>Name</th>
+        <th>Email </th>
+        <th>Mobile </th>
+    </tr>
+
+    <tbody id="myTable">
+        
+    </tbody>
+</table>
+
+<script>
+	var myArray = [
+	    {'name':'ABC', 'email':'abc@gmail.com', 'mobile':'9685452586'},
+	    {'name':'DEF', 'email':'def2@gmail.com', 'mobile':'7785459635'},
+	    {'name':'GHI', 'email':'ghi3@gmail.com', 'mobile':'9658452584'},
+	    {'name':'JKL', 'email':'jkl4@gmail.com', 'mobile':'7111993896'},
+	    {'name':'Tim', 'email':'tim5@gmail.com', 'mobile':'8312199112'},
+	    {'name':'Erik', 'email':'erik@gmail.com', 'mobile':'1031199586'},
+	]
+	
+	buildTable(myArray)
+
+
+
+	function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].name}</td>
+							<td>${data[i].email}</td>
+							<td>${data[i].mobile}</td>
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+</script>
